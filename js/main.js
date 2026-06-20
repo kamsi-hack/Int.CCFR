@@ -17,3 +17,18 @@ setInterval(() => {
     }
 
 },3000);
+// Contact Form Demo
+
+const contactForm = document.querySelector(".contact-form form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        alert("Thank you! Your message has been received.");
+
+        contactForm.reset();
+
+    });
+} 
