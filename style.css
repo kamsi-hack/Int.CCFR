@@ -828,3 +828,9 @@ TESTIMONIALS
     font-weight:600;
 
 }
+.active-testimonial{
+
+    transform:translateY(-12px);
+    box-shadow:0 25px 50px rgba(0,150,136,.25);
+
+}
