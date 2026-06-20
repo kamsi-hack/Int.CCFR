@@ -1051,3 +1051,56 @@ CONTACT SECTION
     border:0;
 
 }
+/*=========================
+CONTACT RESPONSIVE
+=========================*/
+
+@media(max-width:991px){
+
+.contact .container{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact .title p{
+
+    width:90%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.contact{
+
+    padding:80px 0;
+
+}
+
+.row{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-form{
+
+    padding:25px;
+
+}
+
+.contact-form button{
+
+    width:100%;
+
+}
+
+.map{
+
+    height:300px;
+
+}
+
+}
