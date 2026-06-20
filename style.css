@@ -1,0 +1,589 @@
+/*==================================================
+ICCFR WEBSITE
+style.css
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*========================
+RESET
+========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+    scroll-behavior:smooth;
+}
+
+html{
+    font-size:16px;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    color:#333;
+    background:#ffffff;
+    line-height:1.7;
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+/*========================
+VARIABLES
+========================*/
+
+:root{
+
+--primary:#009688;
+--secondary:#ff9800;
+--dark:#0f172a;
+--light:#ffffff;
+--gray:#666;
+--shadow:0 12px 35px rgba(0,0,0,.08);
+--radius:12px;
+--transition:.35s ease;
+
+}
+
+/*========================
+HEADER
+========================*/
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#fff;
+z-index:999;
+box-shadow:0 3px 12px rgba(0,0,0,.05);
+
+}
+
+header .container{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+
+}
+
+.logo h2{
+
+color:var(--primary);
+font-size:34px;
+font-weight:800;
+
+}
+
+.logo span{
+
+font-size:13px;
+display:block;
+color:#666;
+
+}
+
+nav ul{
+
+display:flex;
+gap:30px;
+
+}
+
+nav ul li a{
+
+color:#333;
+font-weight:600;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:var(--primary);
+
+}
+
+.active{
+
+color:var(--primary);
+
+}
+
+.donate-btn{
+
+background:var(--secondary);
+padding:12px 28px;
+border-radius:40px;
+color:#fff !important;
+transition:.3s;
+
+}
+
+.donate-btn:hover{
+
+background:#ff7f00;
+transform:translateY(-3px);
+
+}
+
+.menu{
+
+display:none;
+font-size:30px;
+cursor:pointer;
+
+}
+
+/*========================
+HERO
+========================*/
+
+.hero{
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,.55),
+rgba(0,0,0,.55)),
+
+url("../images/hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+color:white;
+
+padding:120px 20px;
+
+}
+
+.hero-content{
+
+max-width:850px;
+
+}
+
+.hero h4{
+
+font-size:22px;
+font-weight:500;
+margin-bottom:15px;
+color:#ffd54f;
+
+}
+
+.hero h1{
+
+font-size:62px;
+font-weight:800;
+line-height:1.2;
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:19px;
+margin-bottom:35px;
+color:#f3f3f3;
+
+}
+
+/*========================
+BUTTONS
+========================*/
+
+.hero-buttons{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.btn-one{
+
+display:inline-block;
+
+padding:15px 38px;
+
+background:var(--primary);
+
+color:white;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-one:hover{
+
+transform:translateY(-5px);
+
+background:#00796b;
+
+}
+
+.btn-two{
+
+display:inline-block;
+
+padding:15px 38px;
+
+border:2px solid white;
+
+color:white;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-two:hover{
+
+background:white;
+color:#222;
+
+}
+
+/*========================
+FEATURES
+========================*/
+
+.features{
+
+padding:90px 0;
+background:#fafafa;
+
+}
+
+.features .container{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+text-align:center;
+
+border-radius:15px;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card i{
+
+font-size:55px;
+
+color:var(--primary);
+
+margin-bottom:25px;
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+font-size:25px;
+
+}
+
+.card p{
+
+color:#666;
+
+}
+
+/*========================
+ABOUT
+========================*/
+
+.about{
+
+padding:120px 0;
+
+}
+
+.about .container{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.about img{
+
+border-radius:18px;
+
+box-shadow:var(--shadow);
+
+}
+
+.about h5{
+
+color:var(--secondary);
+
+font-size:18px;
+
+margin-bottom:12px;
+
+}
+
+.about h2{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+line-height:1.3;
+
+}
+
+.about p{
+
+margin-bottom:20px;
+
+color:#666;
+
+}
+
+/*========================
+IMPACT
+========================*/
+
+.impact{
+
+background:var(--primary);
+
+padding:80px 0;
+
+color:white;
+
+}
+
+.impact .container{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(200px,1fr));
+
+gap:30px;
+
+text-align:center;
+
+}
+
+.box h2{
+
+font-size:60px;
+
+font-weight:800;
+
+}
+
+.box p{
+
+font-size:20px;
+
+}
+
+/*========================
+PROGRAMS
+========================*/
+
+.causes{
+
+padding:120px 0;
+
+background:#fafafa;
+
+}
+
+.title{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.title h5{
+
+color:var(--secondary);
+
+font-size:18px;
+
+margin-bottom:10px;
+
+}
+
+.title h2{
+
+font-size:45px;
+
+}
+
+.causes .container{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+}
+
+.cause-card{
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+}
+
+.cause-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.cause-card img{
+
+height:240px;
+
+object-fit:cover;
+
+}
+
+.content{
+
+padding:30px;
+
+}
+
+.content h3{
+
+margin-bottom:15px;
+
+font-size:26px;
+
+}
+
+.content p{
+
+color:#666;
+
+}
+
+/*========================
+CTA
+========================*/
+
+.cta{
+
+background:
+
+linear-gradient(rgba(0,150,136,.85),
+rgba(0,150,136,.85)),
+url("../images/cta.jpg");
+
+background-size:cover;
+
+padding:100px 20px;
+
+text-align:center;
+
+color:white;
+
+}
+
+.cta h2{
+
+font-size:48px;
+
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+max-width:700px;
+
+margin:auto;
+
+margin-bottom:35px;
+
+font-size:18px;
+
+}
