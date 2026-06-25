@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate | Hope Foundation</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fa;
+}
+
+.donate-header{
+    background:linear-gradient(135deg,#0066ff,#00b4ff);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.donate-header h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.donate-header p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.donation-box{
+    max-width:850px;
+    background:white;
+    margin:-60px auto 70px;
+    border-radius:15px;
+    padding:45px;
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
+.wallet-card{
+    text-align:center;
+}
+
+.wallet-card img{
+    width:220px;
+    margin:25px 0;
+}
+
+.wallet-card h2{
+    color:#0066ff;
+    margin-bottom:10px;
+}
+
+.network{
+    display:inline-block;
+    padding:8px 20px;
+    background:#eaf4ff;
+    color:#0066ff;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.wallet-address{
+    background:#f4f4f4;
+    padding:18px;
+    border-radius:10px;
+    word-break:break-all;
+    font-size:16px;
+    margin:20px 0;
+}
+
+.copy-btn{
+    background:#0066ff;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.copy-btn:hover{
+    background:#004dcc;
+}
+
+.info{
+    margin-top:40px;
+}
+
+.info h3{
+    color:#0066ff;
+}
+
+.info ul{
+    line-height:2;
+}
+
+.back-home{
+    text-align:center;
+    margin-top:40px;
+}
+
+.back-home a{
+    text-decoration:none;
+    color:white;
+    background:#0066ff;
+    padding:15px 35px;
+    border-radius:40px;
+}
+
+@media(max-width:768px){
+
+.donate-header h1{
+    font-size:34px;
+}
+
+.donation-box{
+    margin:20px;
+    padding:25px;
+}
+}
+</style>
+
+</head>
+<body>
+
+<section class="donate-header">
+
+<h1>Support Our Mission</h1>
+
+<p>
+Every contribution helps us provide food, education,
+healthcare, and emergency assistance to families in need.
+Thank you for making a difference.
+</p>
+
+</section>
+
+<section class="donation-box">
+
+<div class="wallet-card">
+
+<h2>Donate with Trust Wallet</h2>
+
+<div class="network">
+USDT (TRC20)
+</div>
+
+<!-- Sample QR Code -->
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=TKFakeWallet123456789ABCDEFGHJKLMN987654321"
+alt="Wallet QR Code">
+
+<div class="wallet-address" id="wallet">
+
+0x8d82e31d899d7a5f0ecacc3277fe23a267e53009
+
+</div>
+
+<button class="copy-btn" onclick="copyWallet()">
+<i class="fa-solid fa-copy"></i>
+Copy Wallet Address
+</button>
+
+</div>
+
+<div class="info">
+
+<h3>Before You Donate</h3>
+
+<ul>
+<li>✔ Network: <strong>TRON (TRC20)</strong></li>
+
+<li>✔ Currency: <strong>USDT</strong></li>
+
+<li>✔ Double-check the wallet address before sending.</li>
+
+<li>✔ Cryptocurrency transactions cannot be reversed.</li>
+
+<li>✔ Thank you for supporting our humanitarian projects.</li>
+
+</ul>
+
+</div>
+
+<div class="back-home">
+<a href="index.html">← Back to Home</a>
+</div>
+
+</section>
+
+<script>
+function copyWallet(){
+
+const wallet=document.getElementById("wallet").innerText;
+
+navigator.clipboard.writeText(wallet);
+
+alert("Wallet address copied!");
+}
+</script>
+
+</body>
+</html>
