@@ -209,3 +209,89 @@ alert("Wallet address copied!");
 
 </body>
 </html>
+
+qr-code.png
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Donation</title>
+
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f4f4f4;
+    font-family:Arial,sans-serif;
+}
+
+.card{
+    width:380px;
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.card img{
+    width:280px;
+    height:280px;
+}
+
+.wallet{
+    margin-top:20px;
+    font-size:16px;
+    word-break:break-all;
+    font-weight:bold;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#00b894;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#019870;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Donate with Crypto</h2>
+
+<img src="qr-code.png" alt="Wallet QR Code">
+
+<div class="wallet" id="wallet">
+0x8d82E31D899d7a5F0EcACC3277FE23A267e53009
+</div>
+
+<button onclick="copyWallet()">Copy Wallet Address</button>
+
+</div>
+
+<script>
+function copyWallet(){
+    const wallet=document.getElementById("wallet").innerText;
+
+    navigator.clipboard.writeText(wallet);
+
+    alert("Wallet Address Copied!");
+}
+</script>
+
+</body>
+</html>
